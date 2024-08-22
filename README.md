@@ -43,7 +43,6 @@ Readmission_predictor_Project/
 ├── README.md # This file
 └── requirements.txt # Python dependencies
 
-
 ## Installation and Setup
 
 To run this application locally, follow these steps:
