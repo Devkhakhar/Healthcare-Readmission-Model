@@ -27,21 +27,21 @@ The prediction is made using a Logistic Regression model trained on historical h
 - **Example 2:**
   - **Input:** `Excess Readmission Ratio = 0.85`, `Predicted Readmission Rate = 10.00`, `Expected Readmission Rate = 12.00`
   - **Output:** Readmission Unlikely
-
-## Project Structure
+ 
+    
 Readmission_predictor_Project/
 ├── cms_data_fetch/
-│ ├── app.py # Flask application
-│ ├── train_model.py # Script to train the model
-│ ├── readmission_model.pkl # Trained model file
-│ ├── processed_hospital_readmissions_data.csv # Dataset used for training
-│ ├── visualization.py # Data visualization script
-│ └── templates/
-│ └── index.html # HTML template for the web app
-│ └── static/
-│ └── style.css # CSS styling for the web app
-├── README.md # This file
-└── requirements.txt # Python dependencies
+│   ├── app.py                         # Flask application
+│   ├── train_model.py                 # Script to train the model
+│   ├── readmission_model.pkl          # Trained model file
+│   ├── processed_hospital_readmissions_data.csv  # Dataset used for training
+│   ├── visualization.py               # Data visualization script
+│   ├── templates/
+│   │   └── index.html                 # HTML template for the web app
+│   └── static/
+│       └── style.css                  # CSS styling for the web app
+├── README.md                          # This file
+└── requirements.txt                   # Python dependencies
 
 ## Installation and Setup
 
