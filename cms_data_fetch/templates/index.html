@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Readmission Predictor</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Hospital Readmission Predictor</h1>
+        <form action="/predict" method="post">
+            <label for="excess_readmission_ratio">Excess Readmission Ratio:</label>
+            <input type="number" step="0.01" id="excess_readmission_ratio" name="excess_readmission_ratio" placeholder="e.g., 1.05" required title="The ratio of excess readmissions. Values >1 indicate higher risk.">
+            
+            <label for="predicted_readmission_rate">Predicted Readmission Rate:</label>
+            <input type="number" step="0.01" id="predicted_readmission_rate" name="predicted_readmission_rate" placeholder="e.g., 18.00" required title="Predicted percentage of readmissions. Higher values indicate higher risk.">
+            
+            <label for="expected_readmission_rate">Expected Readmission Rate:</label>
+            <input type="number" step="0.01" id="expected_readmission_rate" name="expected_readmission_rate" placeholder="e.g., 17.00" required title="Expected percentage of readmissions based on patient data.">
+
+            <input type="submit" value="Predict">
+        </form>
+        {% if prediction is not none %}
+            <div class="result">
+                Prediction: {{ 'Readmission Likely' if prediction == 1 else 'Readmission Unlikely' }}
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
